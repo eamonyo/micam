@@ -1,4 +1,6 @@
 services:
+
+  # https://github.com/XiaoMi/xiaomi-miloco
   miloco:
     container_name: miloco
     image: ghcr.nju.edu.cn/xiaomi/miloco-backend
@@ -17,6 +19,7 @@ services:
     #  - ./miloco/prompt_config.yaml:/app/config/prompt_config.yaml
     restart: unless-stopped
 
+  # https://github.com/AlexxIT/go2rtc
   go2rtc:
     image: ghcr.nju.edu.cn/alexxit/go2rtc
     network_mode: host       # important for WebRTC, HomeKit, UDP cameras
@@ -40,9 +43,10 @@ services:
       TZ: ${TZ:-Asia/Shanghai}
     restart: always
 
+  # More Cameras ...
   micam2:
     <<: *micam
-    scale: 0 # disable
+    scale: 0 # disabled
     environment:
       <<: *micam_envs
       CAMERA_ID: ${CAMERA_2_ID}

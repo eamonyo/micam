@@ -1,7 +1,7 @@
-# 🎦 RTSP bridge for Xiaomi Camera
+# 🎦 Xiaomi Camera Streamer
 
 
-## Install
+## Install / 安装
 
 ### Docker compose
 ```shell
@@ -16,20 +16,22 @@ docker compose up -d
 > 部署的Miloco为基础版，不带AI引擎，无GPU算力要求，大部分机器都能运行，但目前不支持arm架构。
 
 
-## Usage
+## Usage / 使用
 
 ### [Miloco](https://github.com/XiaoMi/xiaomi-miloco)
 
-1. Open Miloco WebUI: `https://192.168.1.xx:8000`
-2. Set miloco password
-3. Bind your Xiaomi account
+> 你也可以选择通过[HAOS加载项](https://gitee.com/hasscc/addons)来部署Miloco，[一键添加](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgitee.com%2Fhasscc%2Faddons)加载项仓库。
+
+1. Open Miloco WebUI / 打开Miloco网页: `https://192.168.1.xx:8000`
+2. Set miloco password / 设置Miloco密码
+3. Bind your Xiaomi account / 绑定小米账号
 4. Camera offline ? [[Xiaomi Miloco Q&A]](https://github.com/XiaoMi/xiaomi-miloco/issues/56)
 
 
 ### [Go2rtc](https://github.com/AlexxIT/go2rtc)
 
-1. Open Go2rtc WebUI: `http://192.168.1.xx:1984`
-2. Config empty streams:
+1. Open Go2rtc WebUI / 访问Go2rtc网页: `http://192.168.1.xx:1984`
+2. Config empty streams / 配置空视频流:
    ```yaml
    streams:
       your_stream1:
@@ -40,7 +42,7 @@ docker compose up -d
 
 ### Micam
 
-1. Set environment variables:
+1. Set environment variables / 设置环境变量:
    ```shell
    cat << EOF > .env
    MILOCO_PASSWORD=your_miloco_password_md5
@@ -48,4 +50,4 @@ docker compose up -d
    RTSP_URL=rtsp://go2rtc:8554/your_stream1
    EOF
    ```
-2. Restart micam: `docker compose restart micam1`
+2. Restart micam / 重启转发服务: `docker compose restart micam1`
