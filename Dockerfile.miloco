@@ -1,0 +1,4 @@
+FROM ghcr.nju.edu.cn/xiaomi/miloco-backend
+
+# https://github.com/XiaoMi/xiaomi-miloco/issues/98
+RUN sed -i 's/= MIoTCameraVideoQuality.LOW,/= MIoTCameraVideoQuality.HIGH,/' /app/miot_kit/miot/camera.py

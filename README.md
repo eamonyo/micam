@@ -3,7 +3,7 @@
 
 ## Install / 安装
 
-### Docker compose
+### 🐳 Docker compose
 ```shell
 mkdir /opt/micam
 cd /opt/micam
@@ -16,14 +16,14 @@ docker compose up -d
 > 部署的Miloco为基础版，不带AI引擎，无GPU算力要求，大部分机器都能运行，但目前不支持arm架构。
 
 
-## Usage / 使用
+## 💻 Usage / 使用
 
 ### [Miloco](https://github.com/XiaoMi/xiaomi-miloco)
 
-> 你也可以选择通过[HAOS加载项](https://gitee.com/hasscc/addons)来部署Miloco，[一键添加](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgitee.com%2Fhasscc%2Faddons)加载项仓库。
+> 🏠 你也可以选择通过[HAOS加载项](https://gitee.com/hasscc/addons)来部署Miloco，[一键添加](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgitee.com%2Fhasscc%2Faddons)加载项仓库。
 
 1. Open Miloco WebUI / 打开Miloco网页: `https://192.168.1.xx:8000`
-   > Miloco使用了自签证书，请通过 **https** 访问，并忽略证书错误。
+   > 🔐 Miloco使用了自签证书，请通过 **https** 访问，并忽略证书错误。
 2. Set miloco password / 设置Miloco密码
 3. Bind your Xiaomi account / 绑定小米账号
 4. Camera offline ? [[Xiaomi Miloco Q&A]](https://github.com/XiaoMi/xiaomi-miloco/issues/56)
@@ -31,7 +31,7 @@ docker compose up -d
 
 ### [Go2rtc](https://github.com/AlexxIT/go2rtc)
 
-> 你也可以选择通过[HAOS加载项](https://github.com/AlexxIT/hassio-addons)来部署Go2rtc
+> 🏠 你也可以选择通过[HAOS加载项](https://github.com/AlexxIT/hassio-addons)来部署Go2rtc
 
 1. Open Go2rtc WebUI / 访问Go2rtc网页: `http://192.168.1.xx:1984/config.html`
 2. Config empty streams / 配置空视频流:
@@ -40,7 +40,7 @@ docker compose up -d
      your_stream1:
      your_stream2:
    ```
-3. Save & Restart
+3. Save & Restart / 保存并重启
 
 
 ### [Micam](https://zread.ai/miiot/micam)
@@ -56,7 +56,7 @@ docker compose up -d
 2. Restart micam / 重启转发服务: `docker compose restart micam1`
 
 
-## Configuration / 配置
+## ⚙️ Configuration / 配置
 
 ### Environments / 环境变量
 
@@ -81,13 +81,13 @@ docker compose up -d
    - `MILOCO_LOG_LEVEL`: Miloco log level, Default: `warning`
 
 
-## Integrations / 集成
+## 🧩 Integrations / 集成
 - [Home Assistant: Generic Camera](https://www.home-assistant.io/integrations/generic)
 - [Frigate NVR](https://github.com/blakeblackshear/frigate): [HAOS Add-on](https://github.com/blakeblackshear/frigate-hass-addons)
 - [Scrypted](https://github.com/koush/scrypted): [HAOS Add-on](https://github.com/koush/scrypted/wiki/Installation:-Home-Assistant-OS)
 
 
-## Links / 相关链接
+## 🔗 Links / 相关链接
 - [详细部署文档 & AI问答](https://zread.ai/miiot/micam)
 - [Xiaomi Miloco](https://github.com/XiaoMi/xiaomi-miloco)
 - [AlexxIT Go2rtc](https://github.com/AlexxIT/go2rtc)
